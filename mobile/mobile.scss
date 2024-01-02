@@ -4,7 +4,7 @@
   #reply-control {
     &.fullscreen {
       height: calc(100vh - env(keyboard-inset-height)) !important;
-      padding-bottom: calc(6px + env(keyboard-inset-height));
+      padding-bottom: calc(10px + env(keyboard-inset-height));
 
       @supports (--custom: property) {
         height: calc(var(--composer-vh, 1vh) * 100 - env(keyboard-inset-height)) !important;
