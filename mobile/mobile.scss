@@ -1,0 +1,40 @@
+.fullscreen-composer {
+  overflow: hidden;
+
+  #reply-control {
+    &.fullscreen {
+      height: calc(100% - env(keyboard-inset-height)) !important;
+      padding-bottom: calc(6px + env(keyboard-inset-height));
+
+      @supports (--custom: property) {
+        height: calc(var(--composer-vh, 1vh) * 100 - env(keyboard-inset-height)) !important;
+      }
+
+      .reply-to {
+        border-bottom: 1px solid var(--primary-low);
+        padding-bottom: 6px;
+        .composer-controls {
+          margin-left: auto;
+        }
+      }
+      
+      .d-editor-textarea-wrapper {
+        border: none;
+      }
+      
+      &:before {
+        content: "";
+        background: var(--secondary);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+        left: 0;
+      }
+    }
+  }
+}
+
+.composer-fullscreen-prompt {
+  display: none
+}
