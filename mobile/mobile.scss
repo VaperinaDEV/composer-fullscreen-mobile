@@ -1,3 +1,4 @@
+// fullscreen composer styles
 .fullscreen-composer {
   overflow: hidden;
 
@@ -34,8 +35,30 @@
       }
     }
   }
+  
+  // iOS composer height on fullscreen
+  &.keyboard-visible body.ios-safari-composer-hacks {
+    #reply-control {
+      &.fullscreen {
+        height: calc(var(--composer-vh, 1vh) * 100 - env(safe-area-inset-bottom)) !important;
+
+        .reply-to {
+          padding-top: 0;
+        }
+      }
+    }
+  }
 }
 
 .composer-fullscreen-prompt {
   display: none
+}
+
+// show toggle fullscreen button on iOS
+html:not(.fullscreen-composer) {
+  body.ios-safari-composer-hacks {
+    .toggle-fullscreen {
+      display: block;
+    }
+  }
 }
