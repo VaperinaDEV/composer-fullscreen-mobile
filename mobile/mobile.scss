@@ -37,7 +37,7 @@
   }
   
   // iOS composer height on fullscreen
-  &.keyboard-visible body.ios-safari-composer-hacks {
+  body.ios-safari-composer-hacks {
     #reply-control {
       &.fullscreen {
         height: calc(var(--composer-vh, 1vh) * 100 - env(safe-area-inset-bottom)) !important;
